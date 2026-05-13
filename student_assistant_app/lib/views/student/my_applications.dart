@@ -1,5 +1,8 @@
-/// My Applications Screen
-/// Displays all applications submitted by the current student.
+//Student Name and Surname: Onalenna Shea, Thapelo Magwai, Toka Malachamela, Olebogeng Maruping, Sthembiso Thabethe, Thierry Sithole
+//Student Number: 224076426, 223035662, 221000945, 224084905, 221030472, 224061529
+
+// My Applications Screen
+// Displays all applications submitted by the current student.
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
