@@ -1,6 +1,9 @@
-/// Supabase Service
-/// Initializes and provides Supabase client instance.
-/// This is the core service that all other services depend on.
+//Student Name and Surname: Onalenna Shea, Thapelo Magwai, Toka Malachamela, Olebogeng Maruping, Sthembiso Thabethe, Thierry Sithole
+//Student Number: 224076426, 223035662, 221000945, 224084905, 221030472, 224061529
+
+// Supabase Service
+// Initializes and provides Supabase client instance.
+// This is the core service that all other services depend on.
 
 import 'package:supabase_flutter/supabase_flutter.dart';
 
@@ -18,8 +21,8 @@ class SupabaseService {
     return _instance!;
   }
 
-  /// Initialize Supabase with URL and Anon Key.
-  /// Call this in main() before runApp().
+  // Initialize Supabase with URL and Anon Key.
+  // Call this in main() before runApp().
   static Future<void> initialize() async {
     try {
       // Check if placeholder values are still in place
@@ -43,9 +46,9 @@ class SupabaseService {
     }
   }
 
-  /// Get the current authenticated user's ID.
+  // Get the current authenticated user's ID.
   String? get currentUserId => instance.client.auth.currentUser?.id;
 
-  /// Get the current authenticated user's email.
+  // Get the current authenticated user's email.
   String? get currentUserEmail => instance.client.auth.currentUser?.email;
 }
