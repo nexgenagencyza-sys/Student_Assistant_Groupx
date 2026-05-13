@@ -1,3 +1,6 @@
+//Student Name and Surname: Onalenna Shea, Thapelo Magwai, Toka Malachamela, Olebogeng Maruping, Sthembiso Thabethe, Thierry Sithole
+//Student Number: 224076426, 223035662, 221000945, 224084905, 221030472, 224061529
+
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'supabase_service.dart';
 
@@ -13,7 +16,7 @@ import 'supabase_service.dart';
     }
   }
 
-  /// Sign up a new student user.
+  // Sign up a new student user.
   Future<Map<String, dynamic>> signUp({
     required String email,
     required String password,
@@ -51,7 +54,7 @@ import 'supabase_service.dart';
     }
   }
 
-  /// Sign in an existing user.
+  // Sign in an existing user.
   Future<Map<String, dynamic>> signIn({
     required String email,
     required String password,
@@ -78,21 +81,21 @@ import 'supabase_service.dart';
     }
   }
 
-  /// Sign out the current user.
+  // Sign out the current user.
   Future<void> signOut() async {
     await _client.auth.signOut();
   }
 
-  /// Get the current logged-in user's session.
+  // Get the current logged-in user's session.
   bool get isLoggedIn => _client.auth.currentUser != null;
 
-  /// Get the current user's ID.
+  // Get the current user's ID.
   String? get currentUserId => _client.auth.currentUser?.id;
 
-  /// Get the current user's email.
+  // Get the current user's email.
   String? get currentUserEmail => _client.auth.currentUser?.email;
 
-  /// Get student profile data.
+  // Get student profile data.
   Future<Map<String, dynamic>?> getStudentProfile(String userId) async {
     try {
       final response = await _client
@@ -108,7 +111,7 @@ import 'supabase_service.dart';
     }
   }
 
-  /// Check if user is admin by checking against hardcoded admin emails.
+  // Check if user is admin by checking against hardcoded admin emails.
   Future<bool> isAdmin(String email) async {
     try {
       // List of admin emails - must match RLS policies in database
