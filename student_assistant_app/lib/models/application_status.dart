@@ -1,19 +1,18 @@
-/// Application Status Enum
-/// Defines the possible states of a module assistance application.
-/// Used to track and manage the application lifecycle in the Student Assistant System.
-///
-/// Student Name: [Your Name]
-/// Student Number: [Your Number]
+//Student Name and Surname: Onalenna Shea, Thapelo Magwai, Toka Malachamela, Olebogeng Maruping, Sthembiso Thabethe, Thierry Sithole
+//Student Number: 224076426, 223035662, 221000945, 224084905, 221030472, 224061529
+
+// Defines the possible states of a module assistance application.
+// Used to track and manage the application lifecycle in the Student Assistant System.
 
 enum ApplicationStatus {
   pending,
   approved,
   rejected;
 
-  /// Converts the enum value to its string representation for database storage.
+  // Converts the enum value to its string representation for database storage.
   String get value => name;
 
-  /// Creates an ApplicationStatus from a string value from the database.
+  // Creates an ApplicationStatus from a string value from the database.
   static ApplicationStatus fromString(String status) {
     return ApplicationStatus.values.firstWhere(
       (element) => element.value == status,
@@ -21,7 +20,7 @@ enum ApplicationStatus {
     );
   }
 
-  /// Returns a user-friendly display name.
+  // Returns a user-friendly display name.
   String get displayName {
     switch (this) {
       case ApplicationStatus.pending:
