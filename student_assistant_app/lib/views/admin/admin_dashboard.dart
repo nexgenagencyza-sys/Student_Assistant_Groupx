@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../viewmodels/auth_viewmodel.dart';
 import '../../viewmodels/application_viewmodel.dart';
-import 'manage_applications.dart';
+import './manage_application.dart';
 
 class AdminDashboard extends StatefulWidget {
   const AdminDashboard({super.key});

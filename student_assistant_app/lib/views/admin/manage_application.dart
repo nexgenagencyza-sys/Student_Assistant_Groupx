@@ -172,7 +172,7 @@ class _AdminApplicationCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    '${application.module1}',
+                    application.module1,
                     style: const TextStyle(fontSize: 14),
                   ),
                   if (application.module2 != null) ...[
