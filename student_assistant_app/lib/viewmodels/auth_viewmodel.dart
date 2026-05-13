@@ -1,3 +1,5 @@
+//Student Name and Surname: Onalenna Shea, Thapelo Magwai, Toka Malachamela, Olebogeng Maruping, Sthembiso Thabethe, Thierry Sithole
+//Student Number: 224076426, 223035662, 221000945, 224084905, 221030472, 224061529
 
 import 'package:flutter/material.dart';
 import '../services/auth_service.dart';
@@ -20,7 +22,7 @@ class AuthViewModel extends ChangeNotifier {
   String? get userEmail => _userEmail;
   String? get errorMessage => _errorMessage;
 
-  /// Check if user is already logged in.
+  // Check if user is already logged in.
   Future<void> checkLoginStatus() async {
     _isLoading = true;
     notifyListeners();
@@ -43,7 +45,7 @@ class AuthViewModel extends ChangeNotifier {
     notifyListeners();
   }
 
-  /// Register a new student.
+  // Register a new student.
   Future<bool> register({
     required String email,
     required String password,
@@ -77,7 +79,7 @@ class AuthViewModel extends ChangeNotifier {
     }
   }
 
-  /// Login existing user.
+  // Login existing user.
   Future<bool> login({
     required String email,
     required String password,
@@ -107,7 +109,7 @@ class AuthViewModel extends ChangeNotifier {
     }
   }
 
-  /// Logout user.
+  // Logout user.
   Future<void> logout() async {
     await _authService.signOut();
     _isLoggedIn = false;
@@ -118,7 +120,7 @@ class AuthViewModel extends ChangeNotifier {
     notifyListeners();
   }
 
-  /// Clear error message.
+  // Clear error message.
   void clearError() {
     _errorMessage = null;
     notifyListeners();
