@@ -1,10 +1,9 @@
-/// Application Model
-/// Represents a student's module assistance application in the Student Assistant System.
-/// Students can request assistance for 1 or 2 modules, and applications go through
-/// a review process (pending → approved/rejected).
-///
-/// Student Name: [Your Name]
-/// Student Number: [Your Number]
+//Student Name and Surname: Onalenna Shea, Thapelo Magwai, Toka Malachamela, Olebogeng Maruping, Sthembiso Thabethe, Thierry Sithole
+//Student Number: 224076426, 223035662, 221000945, 224084905, 221030472, 224061529
+
+// Represents a student's module assistance application in the Student Assistant System.
+// Students can request assistance for 1 or 2 modules, and applications go through
+// a review process (pending => approved/rejected)
 
 import 'application_status.dart';
 
@@ -29,21 +28,21 @@ class Application {
     required this.updatedAt,
   });
 
-  /// Helper getter that returns true if the application status is "pending".
+  // Helper getter that returns true if the application status is "pending".
   bool get isPending => status == 'pending';
 
-  /// Helper getter that returns true if the application is approved.
+  // Helper getter that returns true if the application is approved.
   bool get isApproved => status == 'approved';
 
-  /// Helper getter that returns true if the application is rejected.
+  // Helper getter that returns true if the application is rejected.
   bool get isRejected => status == 'rejected';
 
-  /// Returns the ApplicationStatus enum value.
+  // Returns the ApplicationStatus enum value.
   ApplicationStatus get applicationStatus =>
       ApplicationStatus.fromString(status);
 
-  /// Creates an Application object from a Supabase query result map.
-  /// Uses snake_case keys as they appear in the database.
+  // Creates an Application object from a Supabase query result map.
+  // Uses snake_case keys as they appear in the database.
   factory Application.fromMap(Map<String, dynamic> map) {
     return Application(
       id: map['id'] as String,
@@ -57,8 +56,8 @@ class Application {
     );
   }
 
-  /// Converts the Application object to a map for Supabase insert/update operations.
-  /// Uses snake_case keys to match database column naming conventions.
+  // Converts the Application object to a map for Supabase insert/update operations.
+  // Uses snake_case keys to match database column naming conventions.
   Map<String, dynamic> toMap() {
     return {
       'id': id,
