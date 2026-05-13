@@ -1,5 +1,8 @@
-/// Manage Applications Screen
-/// Admin screen to view, approve, reject, and delete applications.
+//Student Name and Surname: Onalenna Shea, Thapelo Magwai, Toka Malachamela, Olebogeng Maruping, Sthembiso Thabethe, Thierry Sithole
+//Student Number: 224076426, 223035662, 221000945, 224084905, 221030472, 224061529
+
+// Manage Applications Screen
+// Admin screen to view, approve, reject, and delete applications.
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../models/application.dart';
@@ -169,13 +172,13 @@ class _AdminApplicationCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    '📚 ${application.module1}',
+                    '${application.module1}',
                     style: const TextStyle(fontSize: 14),
                   ),
                   if (application.module2 != null) ...[
                     const SizedBox(height: 4),
                     Text(
-                      '📚 ${application.module2}',
+                      '${application.module2}',
                       style: const TextStyle(fontSize: 14),
                     ),
                   ],
