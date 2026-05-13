@@ -134,7 +134,7 @@ class LoginScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: 16),
 
-                    // Register Link
+                    // Register link
                     TextButton(
                       onPressed: () {
                         Navigator.push(
