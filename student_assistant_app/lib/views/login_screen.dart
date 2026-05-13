@@ -1,5 +1,7 @@
+//Student Name and Surname: Onalenna Shea, Thapelo Magwai, Toka Malachamela, Olebogeng Maruping, Sthembiso Thabethe, Thierry Sithole
+//Student Number: 224076426, 223035662, 221000945, 224084905, 221030472, 224061529
 
-/// Allows users to log in or navigate to registration.
+// Allows users to log in or navigate to registration.
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
