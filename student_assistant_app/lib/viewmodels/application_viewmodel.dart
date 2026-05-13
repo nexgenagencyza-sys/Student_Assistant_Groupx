@@ -1,5 +1,8 @@
-/// Manages application state and business logic.
-/// Communicates with ApplicationService and notifies UI via Provider.
+//Student Name and Surname: Onalenna Shea, Thapelo Magwai, Toka Malachamela, Olebogeng Maruping, Sthembiso Thabethe, Thierry Sithole
+//Student Number: 224076426, 223035662, 221000945, 224084905, 221030472, 224061529
+
+// Manages application state and business logic.
+// Communicates with ApplicationService and notifies UI via Provider.
 
 import 'package:flutter/material.dart';
 import '../models/application.dart';
@@ -30,7 +33,7 @@ class ApplicationViewModel extends ChangeNotifier {
   List<Application> get rejectedApplications =>
       _allApplications.where((app) => app.isRejected).toList();
 
-  /// Submit a new application.
+  // Submit a new application.
   Future<bool> submitApplication({
     required String studentId,
     required String studentName,
@@ -62,7 +65,7 @@ class ApplicationViewModel extends ChangeNotifier {
     }
   }
 
-  /// Load applications for a specific student.
+  // Load applications for a specific student.
   Future<void> loadStudentApplications(String studentId) async {
     _isLoading = true;
     notifyListeners();
@@ -73,7 +76,7 @@ class ApplicationViewModel extends ChangeNotifier {
     notifyListeners();
   }
 
-  /// Load all applications (admin only).
+  // Load all applications (admin only).
   Future<void> loadAllApplications() async {
     _isLoading = true;
     notifyListeners();
@@ -84,17 +87,17 @@ class ApplicationViewModel extends ChangeNotifier {
     notifyListeners();
   }
 
-  /// Approve an application.
+  // Approve an application.
   Future<bool> approveApplication(String applicationId) async {
     return await _updateStatus(applicationId, ApplicationStatus.approved.value);
   }
 
-  /// Reject an application.
+  // Reject an application.
   Future<bool> rejectApplication(String applicationId) async {
     return await _updateStatus(applicationId, ApplicationStatus.rejected.value);
   }
 
-  /// Update application status.
+  // Update application status.
   Future<bool> _updateStatus(String applicationId, String status) async {
     _isLoading = true;
     notifyListeners();
@@ -117,7 +120,7 @@ class ApplicationViewModel extends ChangeNotifier {
     }
   }
 
-  /// Delete an application.
+  // Delete an application.
   Future<bool> deleteApplication(String applicationId) async {
     _isLoading = true;
     notifyListeners();
@@ -136,14 +139,14 @@ class ApplicationViewModel extends ChangeNotifier {
     }
   }
 
-  /// Reset submission state.
+  // Reset submission state.
   void resetSubmission() {
     _isSubmitted = false;
     _errorMessage = null;
     notifyListeners();
   }
 
-  /// Clear error message.
+  // Clear error message.
   void clearError() {
     _errorMessage = null;
     notifyListeners();
