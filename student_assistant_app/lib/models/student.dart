@@ -1,10 +1,9 @@
-/// Student Model
-/// Represents a student user in the Student Assistant System.
-/// Contains core student information and provides mapping methods
-/// for Supabase database operations.
-///
-/// Student Name: [Your Name]
-/// Student Number: [Your Number]
+//Student Name and Surname: Onalenna Shea, Thapelo Magwai, Toka Malachamela, Olebogeng Maruping, Sthembiso Thabethe, Thierry Sithole
+//Student Number: 224076426, 223035662, 221000945, 224084905, 221030472, 224061529
+
+// Represents a student user in the Student Assistant System.
+// Contains core student information and provides mapping methods
+// for Supabase database operations.
 
 class Student {
   final String id;
@@ -21,8 +20,8 @@ class Student {
     required this.createdAt,
   });
 
-  /// Creates a Student object from a Supabase query result map.
-  /// Uses snake_case keys as they appear in the database.
+  // Creates a Student object from a Supabase query result map.
+  // Uses snake_case keys as they appear in the database.
   factory Student.fromMap(Map<String, dynamic> map) {
     return Student(
       id: map['id'] as String,
@@ -33,8 +32,8 @@ class Student {
     );
   }
 
-  /// Converts the Student object to a map for Supabase insert/update operations.
-  /// Uses snake_case keys to match database column naming conventions.
+  // Converts the Student object to a map for Supabase insert/update operations.
+  // Uses snake_case keys to match database column naming conventions.
   Map<String, dynamic> toMap() {
     return {
       'id': id,
