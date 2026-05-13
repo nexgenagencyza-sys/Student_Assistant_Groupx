@@ -1,6 +1,9 @@
-/// Application Service
-/// Handles all application-related Supabase operations.
-/// No business logic - just database calls.
+//Student Name and Surname: Onalenna Shea, Thapelo Magwai, Toka Malachamela, Olebogeng Maruping, Sthembiso Thabethe, Thierry Sithole
+//Student Number: 224076426, 223035662, 221000945, 224084905, 221030472, 224061529
+
+// Application Service
+// Handles all application-related Supabase operations.
+// No business logic - just database calls.
 
 import '../models/application.dart';
 import 'supabase_service.dart';
@@ -8,7 +11,7 @@ import 'supabase_service.dart';
 class ApplicationService {
   final _client = SupabaseService.instance.client;
 
-  /// Submit a new module assistance application.
+  // Submit a new module assistance application.
   Future<Map<String, dynamic>> submitApplication({
     required String studentId,
     required String studentName,
@@ -41,7 +44,7 @@ class ApplicationService {
     }
   }
 
-  /// Get all applications for a specific student.
+  // Get all applications for a specific student.
   Future<List<Application>> getStudentApplications(String studentId) async {
     try {
       final response = await _client
@@ -58,7 +61,7 @@ class ApplicationService {
     }
   }
 
-  /// Get all applications (for admin view).
+  // Get all applications (for admin view).
   Future<List<Application>> getAllApplications() async {
     try {
       final response = await _client
@@ -74,7 +77,7 @@ class ApplicationService {
     }
   }
 
-  /// Update application status (approve/reject).
+  // Update application status (approve/reject).
   Future<Map<String, dynamic>> updateApplicationStatus({
     required String applicationId,
     required String status,
@@ -100,7 +103,7 @@ class ApplicationService {
     }
   }
 
-  /// Delete an application.
+  // Delete an application.
   Future<Map<String, dynamic>> deleteApplication(String applicationId) async {
     try {
       await _client.from('applications').delete().eq('id', applicationId);
