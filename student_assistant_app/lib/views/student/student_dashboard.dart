@@ -1,5 +1,8 @@
-/// Student Dashboard
-/// Main screen for students showing their applications and actions.
+//Student Name and Surname: Onalenna Shea, Thapelo Magwai, Toka Malachamela, Olebogeng Maruping, Sthembiso Thabethe, Thierry Sithole
+//Student Number: 224076426, 223035662, 221000945, 224084905, 221030472, 224061529
+
+// Student Dashboard
+// Main screen for students showing their applications and actions.
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
